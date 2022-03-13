@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@MichaelStober 
-MichaelStober
-/
-memory_access_flow
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-memory_access_flow/MicroProgramWriteConstant.vhd
-@MichaelStober
-MichaelStober Update MicroProgramWriteConstant.vhd
-Latest commit 87b2b6d 3 minutes ago
- History
- 1 contributor
-62 lines (54 sloc)  2.12 KB
-   
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
@@ -62,7 +33,7 @@ ARCHITECTURE MicroProgram_architecture OF MicroProgram IS
 	 16#002# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE),
 	 16#003# => (OPCODE => MICRO_NOP, OPERAND => OPERAND_NONE),
          16#004# => (OPCODE => MICRO_STP, OPERAND => OPERAND_NONE)
-
+	);
   -- Interner Intruction_Pointer (Programmzähler)
   SIGNAL  IPTR: NATURAL RANGE 0 TO IPTR_MAX;
 BEGIN
@@ -89,16 +60,3 @@ BEGIN
   OPERAND <= Instruction_Array(IPTR).OPERAND;
   
 END MicroProgram_architecture;
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
