@@ -30,10 +30,10 @@ ARCHITECTURE MicroProgram_architecture OF MicroProgram IS
   TYPE Instruction_Array_Type is ARRAY (natural range <>) of Instruction_Type;
   CONSTANT Instruction_Array: Instruction_Array_Type := 
    ( --Kopieren eines Speicherworts in ein anderes Speicherwort
-	  --16#000# => (OPCODE => MICRO_LDA, OPERAND => X"0A0F"), --Operand in ADR
-	  --16#001# => (OPCODE => MICRO_MVI, OPERAND => OPERAND_NONE), --Speicherwort von ADR in DAT
-	  --16#002# => (OPCODE => MICRO_LDA, OPERAND => X"0510"), --Operand in ADR
-	  --16#003# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE) --Speicherwort von DAT in ADR
+	  16#000# => (OPCODE => MICRO_LDA, OPERAND => X"0A0F"), --Operand in ADR
+	  16#001# => (OPCODE => MICRO_MVI, OPERAND => OPERAND_NONE), --Speicherwort von ADR in DAT
+	  16#002# => (OPCODE => MICRO_LDA, OPERAND => X"0510"), --Operand in ADR
+	  16#003# => (OPCODE => MICRO_MVO, OPERAND => OPERAND_NONE) --Speicherwort von DAT in ADR
 
 	 );
 
